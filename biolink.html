@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bio của KimChon</title>
+    <style>
+        /* Background gradient chuyển động */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #a8edea, #fed6e3, #fcb69f, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Bio container */
+        .bio-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 60px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            max-width: 400px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hiệu ứng hover: phóng to và đổi màu chữ */
+        .bio-container:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        /* Chữ nhấp nháy */
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.5; }
+        }
+
+        .bio-container h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #333;
+            animation: blink 2s infinite;
+            transition: color 0.3s ease;
+        }
+
+        /* Đổi màu chữ khi hover khung */
+        .bio-container:hover h1 {
+            color: #ff4d6d;
+        }
+
+        .bio-container p {
+            margin: 10px 0 0;
+            font-size: 18px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .bio-container:hover p {
+            color: #ff758f;
+        }
+
+        /* Link TikTok & Facebook */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #ff4d6d;
+            color: #fff;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bio-container">
+        <h1>KimChon</h1>
+        <p>Chill vibes 🌿</p>
+        <p>🎮 Game lover</p>
+
+        <div class="social-links">
+            <!-- Thay URL bằng link cá nhân của bạn -->
+            <a href="https://www.tiktok.com/@chonkim28" target="_blank">TikTok</a>
+            <a href="https://www.facebook.com/KimChon" target="_blank">Facebook</a>
+        </div>
+    </div>
+</body>
+</html>
